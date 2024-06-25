@@ -117,7 +117,9 @@ function generateColor() {
 const boxEls = document.getElementsByClassName("box");
 console.log(boxEls);
 const btnEl = document.getElementsByTagName("button")[0];
-console.log(btnEl);
+const addButton = document.getElementById("addButton")[0];
+
+// console.log(btnEl);
 
 function changeBoxColor() {
   for (let i = 0; i < boxEls.length; i++) {
@@ -126,11 +128,20 @@ function changeBoxColor() {
   }
 }
 
-btnEl.addEventListener("click", changeBoxColor);
-
 function generateColor() {
   const rColor = Math.floor(Math.random() * 256);
   const gColor = Math.floor(Math.random() * 256);
   const bColor = Math.floor(Math.random() * 256);
   return "rgb(" + rColor + "," + gColor + "," + bColor + ")";
 }
+function addBox() {
+  const container = document.getElementsByClassName("container");
+  const newDiv = document.createElement("div");
+  newDiv.className = "box";
+  container[0].appendChild(newDiv);
+}
+btnEl.addEventListener("click", changeBoxColor);
+addButton.addEventListener("click", addBox);
+
+//change box dimension
+const changebox = document;

@@ -1,4 +1,4 @@
-.box {
+/* .box {
   width: 320px;
   height: 330px;
   background-color: grey;
@@ -10,4 +10,66 @@
   width: 100px;
   height: 100px;
   background-color: aqua;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  line-height: 200px;
+  border-radius: 20px;
+}
+
+#box1 {
+  background-color: yellow;
+}
+
+#box2 {
+  background-color: green;
+}
+#box3 {
+  background-color: blue;
+}
+#box4 {
+  background-color: aqua;
+}
+#box5 {
+  background-color: brown;
+}
+#box6 {
+  background-color: pink;
+}
+#box7 {
+  background-color: orange;
+}
+#box8 {
+  background-color: purple;
+}
+
+#box9 {
+  background-color: gray;
+}
+
+.btn1 {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  border: 2px;
+  size: 30px;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 10px;
 }

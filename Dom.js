@@ -93,22 +93,44 @@ function generateColor() {
 //   return arr;
 // }
 
-// test(arr);
-const root = document.getElementById("root");
-const btn2 = document.createElement("button");
-btn2.innerText = "start";
-root.appendChild(btn2);
-const box = document.createElement("div");
-root.appendChild(box);
-box.setAttribute("class", "box");
-for (let i = 0; i < 9; i++) {
-  const item1 = document.createElement("div");
-  item1.setAttribute("class", "item1");
-  box.appendChild(item1);
-}
-function changbackroundcolor() {
-  console.log("changed");
-  box.style.backgroundColor = generateColor();
+// //////////test(arr);
+// const root = document.getElementById("root");
+// const btn2 = document.createElement("button");
+// btn2.innerText = "start";
+// root.appendChild(btn2);
+// const box = document.createElement("div");
+// root.appendChild(box);
+// box.setAttribute("class", "box");
+// for (let i = 0; i < 9; i++) {
+//   const item1 = document.createElement("div");
+//   item1.setAttribute("class", "item1");
+//   box.appendChild(item1);
+// }
+// function changbackroundcolor() {
+//   console.log("changed");
+//   box.style.backgroundColor = generateColor();
+// }
+
+// btn2.addEventListener("click", changbackroundcolor);
+//////////////////
+
+const boxEls = document.getElementsByClassName("box");
+console.log(boxEls);
+const btnEl = document.getElementsByTagName("button")[0];
+console.log(btnEl);
+
+function changeBoxColor() {
+  for (let i = 0; i < boxEls.length; i++) {
+    const color = generateColor();
+    boxEls[i].style.backgroundColor = color;
+  }
 }
 
-btn2.addEventListener("click", changbackroundcolor);
+btnEl.addEventListener("click", changeBoxColor);
+
+function generateColor() {
+  const rColor = Math.floor(Math.random() * 256);
+  const gColor = Math.floor(Math.random() * 256);
+  const bColor = Math.floor(Math.random() * 256);
+  return "rgb(" + rColor + "," + gColor + "," + bColor + ")";
+}
